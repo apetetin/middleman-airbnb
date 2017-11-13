@@ -1,4 +1,5 @@
-<ul class="list-inline text-center">
+<ul class="list-inline text-center team">
+  <h1>Best buddies of <%= Date.today.strftime("%A, %b %d") %> are</h1>
   <% data.users.each do |user| %>
     <li>
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user[:github_nickname]}", class: "img-circle avatar" %>
