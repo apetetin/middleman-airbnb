@@ -1,0 +1,21 @@
+juliends:
+  name: Julien, your food coach
+  description: Relax, get inspired for food preparation
+  city_name: "Singapor"
+  city_slug: "singapor"
+  pricing: free
+  rating: 5
+apetetin:
+  name: "Advice for mental peace"
+  description: Practice mindfulness
+  city_name: "Vienna, Österreich"
+  city_slug: "vienna"
+  pricing: free
+  rating: 3
+sonialanglet:
+  name: "Family work balance tips"
+  description: "Find your equilibrium"
+  city_name: "Paris, France"
+  city_slug: "paris"
+  pricing: paying
+  rating: 4

@@ -1,0 +1,10 @@
+<!-- source/offers/show.html.erb -->
+
+<!-- Access data.offers with owner's name as key -->
+<% offer = data.offers[coach] %>
+
+<!-- Inject offer data in template -->
+<%= image_tag "https://kitt.lewagon.com/placeholder/users/#{coach}", class: "img-circle avatar" %>
+<p><%= offer.name %></p>
+<h1><%= offer.description %></h1>
+<p><%= offer.city_name %></p>

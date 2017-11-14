@@ -13,38 +13,18 @@ title: Le Wagon - Middleman
 
 <div class="container home">
   <div class="row">
+    <% data.offers.each do |coach, offer| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/healthy1.jpg');">
-        <div class="card-category">Popular</div>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/healthy_tip_<%= offer.city_slug %>.jpg');">
+        <div class="card-category"> <%= offer.pricing.capitalize %></div>
         <div class="card-description">
-          <h2>Le Wagon Berlin</h2>
-          <p>Very cool city, the best</p>
+          <h2><%= offer.name %></h2>
+          <p><%= offer.description %></p>
         </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        <a class="card-link" href="#" ></a>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{coach}", class: "card-user" %>
+        <%= link_to "", "offers/#{coach}", class: "card-link" %>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/healthy2.jpg');">
-        <div class="card-category">Popular</div>
-        <div class="card-description">
-          <h2>Le Wagon Shanghai</h2>
-          <p>Very cool city, the best</p>
-        </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/healthy3.jpg');">
-        <div class="card-category">Popular</div>
-        <div class="card-description">
-          <h2>Le Wagon Tokyo</h2>
-          <p>Very cool city, the best</p>
-        </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        <a class="card-link" href="#" ></a>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
